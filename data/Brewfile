@@ -13,3 +13,4 @@ brew "ripgrep"
 
 cask "1password"
 cask "discord"
+cask "wezterm"

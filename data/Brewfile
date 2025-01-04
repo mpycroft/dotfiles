@@ -10,6 +10,7 @@ brew "interactive-rebase-tool"
 brew "openssh"
 brew "rip2"
 brew "ripgrep"
+brew "starship"
 
 cask "1password"
 cask "discord"

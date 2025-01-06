@@ -4,6 +4,7 @@ cask_args adopt: true
 brew "chezmoi"
 brew "choose-rust"
 brew "fd"
+brew "fish"
 brew "git"
 brew "hyperfine"
 brew "interactive-rebase-tool"

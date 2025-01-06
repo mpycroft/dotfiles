@@ -1,0 +1,15 @@
+# Don't error out if a cask already exists, adopt it to Homebrew.
+cask_args adopt: true
+
+brew "chezmoi"
+brew "choose-rust"
+brew "fd"
+brew "git"
+brew "hyperfine"
+brew "interactive-rebase-tool"
+brew "openssh"
+brew "rip2"
+brew "ripgrep"
+
+cask "1password"
+cask "discord"

@@ -14,3 +14,5 @@ This one-liner will fetch Chezmoi and install everything.
 ```shell
 zsh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply mpycroft
 ```
+
+Chezmoi will install [Homebrew](https://brew.sh) and install brews and casks listed in the `.chezmoidata.toml` file.

@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+# Install Homebrew if we can't locate the brew command, even if it does exist
+# already this will just cause an update.
+if ! command -v brew >/dev/null; then
+    /bin/bash -c "$(curl -fsSL \
+        https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    eval "$({{ .homebrew.binary }} shellenv)"
+fi
+
+# Store a hash of the Brewfile so that if we change it we will rerun bundle.
+{{ $brewfile := joinPath .chezmoi.sourceDir "data/Brewfile" -}}
+# Brewfile hash:
+# {{ include $brewfile | sha256sum }}
+brew bundle --no-lock --file={{ $brewfile }}

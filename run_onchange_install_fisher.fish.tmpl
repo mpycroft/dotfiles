@@ -1,0 +1,15 @@
+#!{{ .fish.binary }}
+
+# Store the hash of the fish_plugins file so we run whenever it is changed.
+{{- $plugins := joinPath .chezmoi.homeDir ".config/fish/fish_plugins" }}
+# fish_plugins hash:
+# {{ include $plugins | sha256sum }}
+
+# Since we have stored the fisher_plugins file we don't need to call install,
+# update will install if the plugins are missing.
+curl -sL """https://raw.githubusercontent.com/jorgebucaran/fisher/main\
+/functions/fisher.fish" | source && fisher update
+
+# Themes are still saved in universal variables so use fish_config to set
+# everything up.
+echo y | fish_config theme save Catppuccin\ Mocha

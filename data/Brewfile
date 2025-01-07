@@ -1,6 +1,7 @@
 # Don't error out if a cask already exists, adopt it to Homebrew.
 cask_args adopt: true
 
+brew "bat"
 brew "chezmoi"
 brew "choose-rust"
 brew "fd"

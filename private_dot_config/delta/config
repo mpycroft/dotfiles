@@ -1,0 +1,21 @@
+[core]
+    pager = delta
+[merge]
+    conflictStyle = zdiff3
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    syntax-theme = Catppuccin Mocha
+    features = catppuccin-mocha
+    # Overwrite the default Catppuccin settings as the colours do not display
+    # well for some reason and remove some of the excess decoration.
+    commit-decoration-style = "#6c7086"
+    file-decoration-style = "#6c7086" box
+    hunk-header-decoration-style = "#6c7086" ul
+    minus-emph-style = bold syntax "#860e1e"
+    minus-style = syntax "#460e1e"
+    plus-emph-style = bold syntax "#0e861e"
+    plus-style = syntax "#0e461e"
+[include]
+    path = ~/.config/delta/catppuccin.gitconfig

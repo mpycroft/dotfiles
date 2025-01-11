@@ -23,3 +23,5 @@
     enabled = true
 [sequence]
     editor = interactive-rebase-tool
+[include]
+    path = ~/.config/delta/config

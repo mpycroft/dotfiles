@@ -3,6 +3,7 @@ brews = [
     "chezmoi",
     "choose-rust",
     "fd",
+    "git",
     "hyperfine",
     "openssh",
     "rip2",

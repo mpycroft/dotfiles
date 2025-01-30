@@ -1,0 +1,21 @@
+[user]
+    name = Megan Pycroft
+    email = 195514486+mpycroft@users.noreply.github.com
+    signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILBcILhQQ00YJCGcEtjhzwvo6aXU63ZwGhYZhKgpW8ci
+[init]
+    defaultBranch = main
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.config/git/allowed_signers
+    program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+    gpgSign = true
+[tag]
+    gpgSign = true
+[pull]
+    ff = only
+[merge]
+    ff = only
+[rerere]
+    enabled = true

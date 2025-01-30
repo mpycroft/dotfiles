@@ -10,5 +10,6 @@ brews = [
     "rip2",
     "ripgrep",
     "sd",
+    "starship",
 ]
 casks = ["1password", "discord", "font-jetbrains-mono", "kitty"]

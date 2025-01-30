@@ -1,0 +1,5 @@
+[".config/starship/mocha.toml"]
+type = "file"
+url = """https://raw.githubusercontent.com/catppuccin/starship/refs/heads\
+/main/themes/mocha.toml"""
+refreshPeriod = "168h"

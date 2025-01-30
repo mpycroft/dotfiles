@@ -10,4 +10,4 @@ brews = [
     "ripgrep",
     "sd",
 ]
-casks = ["1password", "discord"]
+casks = ["1password", "discord", "font-jetbrains-mono", "kitty"]

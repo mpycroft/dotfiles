@@ -1,0 +1,9 @@
+[data.homebrew]
+# Since Homebrew requires a different install location on Apple Silicon and
+# Intel we need to specify the location per machine. All this can be removed if
+# we don't need to support Intel Macs.
+{{- if eq .chezmoi.arch "arm64" }}
+binary = "/opt/homebrew/bin/brew"
+{{ else }}
+binary = "/usr/local/bin/brew"
+{{ end -}}

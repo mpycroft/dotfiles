@@ -1,0 +1,12 @@
+#!/usr/bin/env fish
+
+# Install fisher and install any plugins.
+curl -sL """https://raw.githubusercontent.com/jorgebucaran/fisher/main\
+/functions/fisher.fish" | source && fisher install \
+{{ range .fisher.plugins -}}
+{{ . | quote }} \
+{{ end }}
+
+# Themes are still saved in universal variables so use fish_config to set
+# everything up.
+echo y | fish_config theme save Catppuccin\ Mocha

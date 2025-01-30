@@ -1,3 +1,11 @@
+[fisher]
+plugins = [
+    "catppuccin/fish",
+    "jhillyerd/plugin-git",
+    "jorgebucaran/autopair.fish",
+    "jorgebucaran/fisher",
+]
+
 [homebrew]
 brews = [
     "chezmoi",

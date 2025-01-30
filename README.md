@@ -24,3 +24,6 @@ the `.chezmoidata.toml` file.
 
 The [fish shell](https://fishshell.com) will be set as the default shell by
 adding it to the `/etc/shells` file and running `chsh`.
+
+[Fisher](https://github.com/jorgebucaran/fisher) and any plugins listed in
+`.chezmoidata.toml` will be installed.

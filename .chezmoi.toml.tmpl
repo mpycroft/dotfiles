@@ -1,9 +1,15 @@
-[data.homebrew]
 # Since Homebrew requires a different install location on Apple Silicon and
 # Intel we need to specify the location per machine. All this can be removed if
 # we don't need to support Intel Macs.
+{{ $homebrew_dir := "" }}
 {{- if eq .chezmoi.arch "arm64" }}
-binary = "/opt/homebrew/bin/brew"
-{{ else }}
-binary = "/usr/local/bin/brew"
-{{ end -}}
+{{- $homebrew_dir = "/opt/homebrew/bin" }}
+{{- else }}
+{{- $homebrew_dir = "/usr/local/bin" }}
+{{- end -}}
+
+[data.fish]
+binary = "{{ $homebrew_dir }}/fish"
+
+[data.homebrew]
+binary = "{{ $homebrew_dir }}/brew"

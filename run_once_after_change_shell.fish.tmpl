@@ -1,0 +1,16 @@
+#!/usr/bin/env fish
+
+# We can't change the shell unless the full path to the shell is already in
+# /etc/shells so we need to add it there.
+if not rg -q {{ .fish.binary }} /etc/shells
+    echo {{ .fish.binary }} | sudo tee -a /etc/shells >/dev/null
+else
+    echo "{{ .fish.binary }} already in /etc/shells"
+end
+
+# Check if the user's shell is set to Fish and change it if it isn't.
+if test (dscl . -read ~/ UserShell | choose 1) != {{ .fish.binary }}
+    chsh -s {{ .fish.binary }}
+else
+    echo "Login shell already set to {{ .fish.binary }}"
+end

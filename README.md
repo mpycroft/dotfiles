@@ -21,3 +21,6 @@ sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply mpycroft
 In addition to syncing the actual dotfiles into the correct directory, Chezmoi
 will install [Homebrew](https://brew.sh) and install brews and casks listed in
 the `.chezmoidata.toml` file.
+
+The [fish shell](https://fishshell.com) will be set as the default shell by
+adding it to the `/etc/shells` file and running `chsh`.

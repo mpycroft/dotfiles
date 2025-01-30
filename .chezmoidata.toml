@@ -1,3 +1,12 @@
 [homebrew]
-brews = ["chezmoi", "choose-rust", "fd", "hyperfine", "rip2", "ripgrep", "sd"]
+brews = [
+    "chezmoi",
+    "choose-rust",
+    "fd",
+    "hyperfine",
+    "openssh",
+    "rip2",
+    "ripgrep",
+    "sd",
+]
 casks = ["1password", "discord"]

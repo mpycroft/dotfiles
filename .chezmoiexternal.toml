@@ -4,8 +4,20 @@ url = """https://raw.githubusercontent.com/catppuccin/bat/refs/heads\
 /main/themes/Catppuccin Mocha.tmTheme"""
 refreshPeriod = "168h"
 
+[".config/lsd/colors.yaml"]
+type = "file"
+url = """https://raw.githubusercontent.com/catppuccin/lsd/refs/heads\
+/main/themes/catppuccin-mocha/colors.yaml"""
+refreshPeriod = "168h"
+
 [".config/starship/mocha.toml"]
 type = "file"
 url = """https://raw.githubusercontent.com/catppuccin/starship/refs/heads\
 /main/themes/mocha.toml"""
+refreshPeriod = "168h"
+
+[".config/vivid/themes/catppuccin-mocha.yml"]
+type = "file"
+url = """https://raw.githubusercontent.com/sharkdp/vivid/refs/heads/\
+master/themes/catppuccin-mocha.yml"""
 refreshPeriod = "168h"

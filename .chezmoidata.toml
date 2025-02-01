@@ -15,10 +15,12 @@ brews = [
     "fish",
     "git",
     "hyperfine",
+    "lsd",
     "openssh",
     "rip2",
     "ripgrep",
     "sd",
     "starship",
+    "vivid",
 ]
 casks = ["1password", "discord", "font-jetbrains-mono", "kitty"]

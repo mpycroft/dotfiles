@@ -1,0 +1,20 @@
+#!/usr/bin/env fish -N
+
+# Due to the Fzf plugin not being installed yet fish will throw (ignorable)
+# errors when loading configuration files. So this script is run without
+# configuration but we still need to source fisher_path before invoking fisher.
+# Additionally fisher itself will call fish so we redirect stderr to make it
+# claner.
+source ~/.config/fish/conf.d/fisher.fish
+
+# Install fisher and install any plugins.
+curl -sL """https://raw.githubusercontent.com/jorgebucaran/fisher/main\
+/functions/fisher.fish" | source && fisher install \
+{{ range .fisher.plugins -}}
+{{ . | quote }} \
+{{ end }} 2> /dev/null
+
+# Themes are still saved in universal variables so use fish_config to set
+# everything up. We invoke this in a new fish shell that loads all
+# configuration files as otherwise the theme is not set properly.
+fish -c "echo y | fish_config theme save Catppuccin\ Mocha"

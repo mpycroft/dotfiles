@@ -1,3 +1,9 @@
+[".config/bat/themes/Catppuccin Mocha.tmTheme"]
+type = "file"
+url = """https://raw.githubusercontent.com/catppuccin/bat/refs/heads\
+/main/themes/Catppuccin Mocha.tmTheme"""
+refreshPeriod = "168h"
+
 [".config/starship/mocha.toml"]
 type = "file"
 url = """https://raw.githubusercontent.com/catppuccin/starship/refs/heads\

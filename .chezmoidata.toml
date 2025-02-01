@@ -4,6 +4,7 @@ plugins = [
     "jhillyerd/plugin-git",
     "jorgebucaran/autopair.fish",
     "jorgebucaran/fisher",
+    "patrickf1/fzf.fish",
 ]
 
 [homebrew]
@@ -13,6 +14,7 @@ brews = [
     "choose-rust",
     "fd",
     "fish",
+    "fzf",
     "git",
     "hyperfine",
     "lsd",

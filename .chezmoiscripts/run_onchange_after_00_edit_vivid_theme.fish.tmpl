@@ -1,0 +1,21 @@
+#!/usr/bin/env fish -N
+# This script needs to run first to avoid causing errors trying to load the
+# vivid theme. We start without executing any configuration files to avoid
+# displaying that error.
+
+{{ $mocha := joinPath .chezmoi.homeDir
+".config/vivid/themes/catppuccin-mocha.yml" -}}
+# Replace the very bright yellow background for special text files in the
+# default Catppuccin Mocha theme with a more soothing peach. Store the hash of
+# the original file so that we will rerun if it changes.
+# Hash: {{ include $mocha | sha256sum }}
+cat {{ $mocha }} | sd """
+text:
+  special:
+    foreground: base
+    background: yellow
+""" """
+text:
+  special:
+    foreground: peach
+""" >{{ joinPath .chezmoi.homeDir ".config/vivid/themes/catppuccin.yml" }}

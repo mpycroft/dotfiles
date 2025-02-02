@@ -19,3 +19,5 @@
     ff = only
 [rerere]
     enabled = true
+[include]
+    path = ~/.config/delta/config

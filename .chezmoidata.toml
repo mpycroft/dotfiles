@@ -16,6 +16,7 @@ brews = [
     "fish",
     "fzf",
     "git",
+    "git-delta",
     "hyperfine",
     "lsd",
     "openssh",
